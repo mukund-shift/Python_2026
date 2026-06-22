@@ -27,5 +27,3 @@ with open(comp_exercises) as exercise_db:
 
 for key, value in names.items():
     print(f"{value[0]} {value[1]} {sum(exercises[key])}")
-
-
