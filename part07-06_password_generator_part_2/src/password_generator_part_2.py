@@ -1,4 +1,5 @@
 # Write your solution here
+# Can actually use this for personal tasks(altho can use more rules to gen pass)
 import random
 
 def generate_strong_password(length: int, numbers: bool, special: bool):
@@ -24,8 +25,8 @@ def generate_strong_password(length: int, numbers: bool, special: bool):
         result = list(result)
         result[random.randint(0, len(result) - 1)] = letters[random.randint(0, 25)]
         result = str(result)
-    
     return result
+
 
 if __name__ == "__main__":
     pw = generate_strong_password(2, False, False)
