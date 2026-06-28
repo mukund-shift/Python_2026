@@ -1,4 +1,4 @@
-
+# Very useful program
 
 def blank_indices(search_term: str):
     indices = []
@@ -51,6 +51,7 @@ def find_words(search_term: str):
                 found.add(word)
         found = sorted(list(found))
         return found
+
 
 if __name__ == "__main__":
     found = find_words("*vokes")
