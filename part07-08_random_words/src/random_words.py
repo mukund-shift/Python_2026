@@ -17,6 +17,7 @@ def words(n: int, beginning: str):
         raise ValueError
     return random.sample(matches, n)
 
+
 if __name__ == "__main__":
     word_list = words(4, "bl")
     print(word_list)
