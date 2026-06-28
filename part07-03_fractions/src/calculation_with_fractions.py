@@ -3,7 +3,8 @@
 import fractions
 
 def fractionate(amount: int):
-    return [fractions.Fraction(1, amount)] * amount
+    result = [fractions.Fraction(1, amount)] * amount
+    return result
 
 
 if __name__ == "__main__":
