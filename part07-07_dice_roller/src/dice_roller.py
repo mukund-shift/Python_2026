@@ -1,4 +1,5 @@
 # Write your solution here
+# Transitive die experiments (Very cool)
 import random
 
 def roll(dice: str):
@@ -23,6 +24,7 @@ def play(die1: str, die2: str, times: int):
         else:
             ties += 1
     return wins1, wins2, ties
+    
 
 if __name__ == "__main__":
     
