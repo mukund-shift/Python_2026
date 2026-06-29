@@ -19,5 +19,5 @@ def words(n: int, beginning: str):
 
 
 if __name__ == "__main__":
-    word_list = words(4, "bl")
+    word_list = words(3, "ca")
     print(word_list)
