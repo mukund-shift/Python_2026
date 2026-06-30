@@ -1,4 +1,5 @@
 # Write your solution here
+# Can implement a game with this
 import random
 
 all_words = set()

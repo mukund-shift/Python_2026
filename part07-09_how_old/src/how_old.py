@@ -1,4 +1,5 @@
 # Write your solution here
+# Good idea for a mobile app
 
 from datetime import datetime
 
