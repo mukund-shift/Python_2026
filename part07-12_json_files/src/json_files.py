@@ -1,4 +1,5 @@
 # Write your solution here
+# json is very simple, just a list of dictionaries containing attributes
 import json
 
 def print_persons(filename: str):
