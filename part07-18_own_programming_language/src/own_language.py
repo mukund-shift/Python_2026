@@ -1,16 +1,11 @@
 # Write your solution here
-import sys
 
-variables = {}                                              # "A" : value
-locations = {}                                              # "begin" : line_index
-printed = []
-ctr = 0
 
 def newprint(char: str):
     if char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
         char = variables[char]
     else:
-        char = int(parts[0])
+        char = int(char)
     printed.append(char)
 
 def mov(variable: str, value: str):
@@ -41,7 +36,7 @@ def mul(variable: str, value: str):                     # mov,add,sub,mul all mo
     else:
         variables[variable] *= int(value)
 
-def location(location : str, line_idx : int):                           # adds location to global locations list
+def location(location : str, line_idx : int):           # adds location to global locations list
     global locations
     locations[location[:-1]] = line_idx
 
@@ -88,13 +83,16 @@ def operation(line: str):
     elif parts[0] == "IF":
         if condition_checker(parts[1:4]):
             ctr = locations[parts[-1]]
-    else:
-        location(parts[0], ctr)
 
 
 def run(program: list):
-    length = len(program)
     global ctr
+    length = len(program)
+
+    for k in range(length):                                 # populates locations pre-execution
+        if ":" in program[k]:
+            location(program[k], k)
+
     while True:
         line = program[ctr]
         if line == "END":
@@ -105,18 +103,19 @@ def run(program: list):
             break
     return printed
 
-program2 = []
-program2.append("MOV A 1")
-program2.append("MOV B 10")
-program2.append("begin:")
-program2.append("IF A >= B JUMP quit")
-program2.append("PRINT A")
-program2.append("PRINT B")
-program2.append("ADD A 1")
-program2.append("SUB B 1")
-program2.append("JUMP begin")
-program2.append("quit:")
-program2.append("END")
-result = run(program2)
-print(result)
+if __name__ == "__main__":
+    variables = {
+    "A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "G": 0, "H": 0, "I": 0, "J": 0,
+    "K": 0, "L": 0, "M": 0, "N": 0, "O": 0, "P": 0, "Q": 0, "R": 0, "S": 0, "T": 0,
+    "U": 0, "V": 0, "W": 0, "X": 0, "Y": 0, "Z": 0
+    }                                                           # "A" : value
+    locations = {}                                              # "begin" : line_index
+    printed = []
+    ctr = 0
+    program4 = []
+    program4.append("PRINT A")
+    program4.append("END")
+    result = run(program4)
+    print(result)
+
 
