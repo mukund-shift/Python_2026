@@ -114,6 +114,7 @@ if __name__ == "__main__":
     ctr = 0
     
     program4 = []
+    
     program4.append("MOV N 50")
     program4.append("PRINT 2")
     program4.append("MOV A 3")
